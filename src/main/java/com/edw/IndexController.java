@@ -18,7 +18,7 @@ public class IndexController {
     @GetMapping("/")
     public HashMap helloWorld() {
         return new HashMap<>(){{
-            put("Message", "Hello Spring Boot. Ini setelah commit");
+            put("Message", "Este es un ejemplo ");
         }};
     }
 }
