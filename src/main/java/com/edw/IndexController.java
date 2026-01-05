@@ -18,7 +18,7 @@ public class IndexController {
     @GetMapping("/")
     public HashMap helloWorld() {
         return new HashMap<>(){{
-            put("Message", "Ejemplo con Erick Quispe Quispe...");
+            put("Message", "Ejemplo con Erick Osvaldo Quispe Quispe...");
         }};
     }
 }
