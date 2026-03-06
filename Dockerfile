@@ -2,7 +2,8 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/ubi8-openjdk-17-runtime:1.12
 USER root
 # Si ya tienes el jar, este paso es solo para organizar
-RUN ls -l target/*.jar
+#RUN ls -l target/*.jar
+RUN pwd
 COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
 EXPOSE 8080
 USER 185
