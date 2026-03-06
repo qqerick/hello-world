@@ -7,7 +7,7 @@ WORKDIR /home/jboss/source
 RUN ls -l target/*.jar
 
 # Etapa 2: Imagen de ejecución (ligera)
-FROM registry.redhat.io/ubi8/openjdk-11-runtime:latest
+FROM openjdk-21:latest
 LABEL maintainer="DevOps Team"
 
 # Copiamos solo el artefacto de la etapa anterior
