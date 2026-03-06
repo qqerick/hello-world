@@ -1,5 +1,5 @@
 # Etapa 1: Preparación (usando UBI para cumplimiento de seguridad en OpenShift)
-FROM registry.redhat.io/ubi8/openjdk-11:latest AS builder
+FROM image-registry.openshift-image-registry.svc:5000/openshift/ubi8-openjdk-17-runtime:1.12
 USER root
 COPY . /home/jboss/source
 WORKDIR /home/jboss/source
