@@ -8,8 +8,9 @@ RUN pwd
 COPY --chown=185:0 target/*.jar /deployments/app.jar
 RUN ls -ltr
 #COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
-EXPOSE 8080
 USER 185
+EXPOSE 8080
+
 ENV JAVA_OPTIONS="-Djava.security.egd=file:/dev/./urandom"
 
 CMD ["java", "-jar", "/deployments/app.jar"]
