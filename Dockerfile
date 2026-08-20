@@ -2,7 +2,7 @@
 FROM registry.access.redhat.com/ubi9/openjdk-17-runtime:1.18
 #USER root
 # Si ya tienes el jar, este paso es solo para organizar
-RUN ls -l target/*.jar
+RUN ls -ltr
 COPY target/*.jar app.jar
 #COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
 EXPOSE 8080
