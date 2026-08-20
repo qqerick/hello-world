@@ -5,7 +5,7 @@ USER root
 RUN ls -ltr /
 RUN pwd
 
-COPY target/*.jar app.jar
+COPY target/*.jar /deployments/app.jar
 RUN ls -ltr
 #COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
 EXPOSE 8080
