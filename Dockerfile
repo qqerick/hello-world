@@ -13,5 +13,5 @@ EXPOSE 8080
 
 ENV JAVA_OPTIONS="-Djava.security.egd=file:/dev/./urandom"
 
-CMD ["java", "-jar", "/deployments/app.jar"]
+ENTRYPOINT ["java", "-jar", "/deployments/app.jar"]
 
