@@ -6,7 +6,7 @@ RUN ls -ltr /
 RUN pwd
 
 COPY --chown=185:0 target/*.jar /deployments/app.jar
-RUN ls -ltr
+RUN ls -ltr /deployments
 #COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
 USER 185
 EXPOSE 8080
