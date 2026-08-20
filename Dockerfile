@@ -4,11 +4,12 @@ USER root
 # Si ya tienes el jar, este paso es solo para organizar
 RUN ls -ltr /
 RUN pwd
-RUN ls -ltr
+
 COPY target/*.jar app.jar
+RUN ls -ltr
 #COPY --from=builder /home/jboss/source/target/*.jar /deployments/app.jar
 EXPOSE 8080
-#USER 185
+USER 185
 ENV JAVA_OPTIONS="-Djava.security.egd=file:/dev/./urandom"
 
 CMD ["java", "-jar", "/deployments/app.jar"]
